@@ -5,4 +5,6 @@
 
 Run the app (python3 manage.py runserver)
 
+view all app urls(urls)[http://localhost:8000/api/v1/users/urls] after running the app
+
  
