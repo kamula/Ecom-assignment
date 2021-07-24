@@ -6,6 +6,16 @@ from rest_framework import status
 from .models import Account
 from .serializers import RegistrationSerializer
 
+@api_view(['GET'])
+def get_urls(request):
+    data =[
+        'POST:{{url}}/api/v1/users/signup',
+        'POST:{{url}}/api/v1/users/login',
+        'GET & POST product categories :{{url}}api/v1/products/categories',
+        'GET & POST products :{{url}}api/v1/products/',
+    ]
+    return Response(data,status=status.HTTP_200_OK)
+
 @api_view(['POST'])
 def signup_view(request):
     '''user registration'''
